@@ -1,21 +1,17 @@
-/**
- * Footer component
- *
- * Displays avenues to contact you.
- */
+import type { FooterProps } from "@/lib/types";
 
-const Footer = ({
+export default function Footer({
   devDotTo,
   email,
   gitHub,
   instagram,
   linkedIn,
   medium,
-  name = "",
+  name,
   primaryColor,
   twitter,
   youTube,
-}) => {
+}: FooterProps) {
   return (
     <div
       id="footer"
@@ -94,6 +90,4 @@ const Footer = ({
       </p>
     </div>
   );
-};
-
-export default Footer;
+}

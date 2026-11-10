@@ -1,4 +1,16 @@
-export const siteProps = {
+export type SiteProps = {
+  name: string;
+  title: string;
+  email: string;
+  gitHub: string;
+  instagram: string;
+  linkedIn: string;
+  medium: string;
+  twitter: string;
+  youTube: string;
+};
+
+export const siteProps: SiteProps = {
   name: "Santiago Rodriguez",
   title: "Full Stack Developer",
   email: "santiromur@gmail.com",

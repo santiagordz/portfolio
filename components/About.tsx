@@ -1,9 +1,3 @@
-/**
- * About component
- *
- * Space for you to describe more about yourself.
- */
-
 const imageAltText = "a man with his dog watching the sunset";
 
 const description =
@@ -16,12 +10,12 @@ const skillsList = [
   "Automatic Testing",
   "Learning Cybersecurity",
   "Learning Cloud Computing",
-];
+] as const;
 
 const detailOrQuote =
   "I'm a very passionate person, I love to learn new things, and I'm always looking for new challenges. I'm a very organized person, and I like to work in a team.";
 
-const About = () => {
+export default function About() {
   return (
     <section className="padding" id="about">
       <img className="background" src="/images/myself.jpg" alt={imageAltText} />
@@ -56,6 +50,4 @@ const About = () => {
       </div>
     </section>
   );
-};
-
-export default About;
+}

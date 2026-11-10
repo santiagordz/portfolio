@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Cormorant_Garamond, Montserrat } from "next/font/google";
 
 import "./globals.css";
@@ -22,10 +23,17 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+type RootLayoutProps = {
+  children: ReactNode;
+};
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} ${cormorant.variable}`} style={{ fontFamily: "var(--font-montserrat), sans-serif" }}>
+      <body
+        className={`${montserrat.variable} ${cormorant.variable}`}
+        style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+      >
         {children}
       </body>
     </html>

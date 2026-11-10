@@ -1,11 +1,4 @@
-/**
- * Header component
- *
- * Top navigation bar for your site. Set to remain visible as the
- * user scrolls so that they can constantly reach any part of your page.
- */
-
-const Header = () => {
+export default function Header() {
   return (
     <div
       style={{
@@ -26,6 +19,4 @@ const Header = () => {
       <a href="#footer">Contact</a>
     </div>
   );
-};
-
-export default Header;
+}

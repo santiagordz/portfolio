@@ -1,13 +1,8 @@
-/**
- * Home component
- *
- * The section at the top of the page to display image of your
- * choice, name and title that describes your career focus.
- */
+import type { HomeProps } from "@/lib/types";
 
 const imageAltText = "New York City Skyline";
 
-const Home = ({ name = "", title = "" }) => {
+export default function Home({ name = "", title = "" }: HomeProps) {
   return (
     <section id="home" className="min-height">
       <img className="background" src="/images/ny-skyline.jpg" alt="" />
@@ -24,6 +19,4 @@ const Home = ({ name = "", title = "" }) => {
       </div>
     </section>
   );
-};
-
-export default Home;
+}

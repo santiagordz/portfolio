@@ -1,6 +1,8 @@
+import type { Project } from "@/lib/types";
+
 const imageAltText = "desktop with laptop";
 
-const projectList = [
+const projectList: Project[] = [
   {
     title: "Fan Interaction Website",
     description:
@@ -22,7 +24,7 @@ const projectList = [
   },
 ];
 
-const Portfolio = () => {
+export default function Portfolio() {
   return (
     <section className="padding" id="portfolio">
       <h2 style={{ textAlign: "center" }}>Portfolio</h2>
@@ -65,6 +67,4 @@ const Portfolio = () => {
       </div>
     </section>
   );
-};
-
-export default Portfolio;
+}
