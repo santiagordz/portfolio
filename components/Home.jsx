@@ -1,0 +1,29 @@
+/**
+ * Home component
+ *
+ * The section at the top of the page to display image of your
+ * choice, name and title that describes your career focus.
+ */
+
+const imageAltText = "New York City Skyline";
+
+const Home = ({ name = "", title = "" }) => {
+  return (
+    <section id="home" className="min-height">
+      <img className="background" src="/images/ny-skyline.jpg" alt="" />
+      <div style={{ position: "absolute", top: "5rem", left: "2rem", width: "17rem" }}>
+        <h1 style={{ color: "#94fff5" }}>{name}</h1>
+        <h2 style={{ color: "#3e7d9b" }}>{title}</h2>
+      </div>
+      <div style={{ position: "absolute", bottom: "3rem", left: "50%" }}>
+        <img
+          src="/images/down-arrow.svg"
+          style={{ height: "3rem", width: "3rem" }}
+          alt={imageAltText}
+        />
+      </div>
+    </section>
+  );
+};
+
+export default Home;

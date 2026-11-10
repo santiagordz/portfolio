@@ -1,10 +1,19 @@
 # Personal Portfolio
 
-A React based website to expose all of my past, present and future work.
+A Next.js portfolio site for past, present, and future work.
 
 ### Authors
 
 - [@santiagordz](https://www.github.com/santiagordz)
+
+## Development
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000).
 
 ## Screenshots
 
