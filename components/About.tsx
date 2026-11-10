@@ -1,24 +1,16 @@
-const imageAltText = "a man with his dog watching the sunset";
+import type { AboutContent } from "@/lib/types";
 
-const description =
-  "I'm a computer science student studying in Tec de Monterrey, passionate in Fullstack developing, and computer engineering. I'm currently working as a BackEnd developer in my own startup.";
-
-const skillsList = [
-  "Database Design",
-  "API Development",
-  "Backend Development",
-  "Automatic Testing",
-  "Learning Cybersecurity",
-  "Learning Cloud Computing",
-] as const;
-
-const detailOrQuote =
-  "I'm a very passionate person, I love to learn new things, and I'm always looking for new challenges. I'm a very organized person, and I like to work in a team.";
-
-export default function About() {
+export default function About({
+  heading,
+  description,
+  skills,
+  quote,
+  backgroundImageSrc,
+  backgroundImageAlt,
+}: AboutContent) {
   return (
     <section className="padding" id="about">
-      <img className="background" src="/images/myself.jpg" alt={imageAltText} />
+      <img className="background" src={backgroundImageSrc} alt={backgroundImageAlt} />
       <div
         style={{
           backgroundColor: "white",
@@ -29,7 +21,7 @@ export default function About() {
           opacity: "0.8",
         }}
       >
-        <h2>About Myself</h2>
+        <h2>{heading}</h2>
         <p className="large">{description}</p>
         <hr />
         <ul
@@ -41,12 +33,12 @@ export default function About() {
             gap: "3rem",
           }}
         >
-          {skillsList.map((skill) => (
+          {skills.map((skill) => (
             <li key={skill}>{skill}</li>
           ))}
         </ul>
         <hr />
-        <p style={{ padding: "1rem 3rem 0" }}>{detailOrQuote}</p>
+        <p style={{ padding: "1rem 3rem 0" }}>{quote}</p>
       </div>
     </section>
   );

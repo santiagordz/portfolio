@@ -27,7 +27,7 @@ type RootLayoutProps = {
   children: ReactNode;
 };
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function FrontendLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body
